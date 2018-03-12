@@ -1,0 +1,23 @@
+﻿@model MyMvCApplication.ViewModel.RandomMovieViewmModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movie.Name</h2>
+@if (Model.Customers != null)
+{
+    <ul>
+        @foreach (var customer in Model.Customers)
+        {
+            <li>@customer.Name</li>
+
+        }
+    </ul>
+
+}
+else
+{ <p>We currently dont have any customers </p>}
+
+@*<h2>@((Movie)ViewData["Movie"]).Name</h2>*@
+
